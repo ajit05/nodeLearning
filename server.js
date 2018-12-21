@@ -2,6 +2,7 @@ const express=require('express');
 const fs=require('fs');
 const hbs=require('hbs');
 var app=express();
+const port=Process.env.PORT || 3000;
 hbs.registerPartials(__dirname+'/views/partials');//for partials
 app.use(express.static(__dirname+'/public'))//static file
 app.set('view engine','hbs');
@@ -46,5 +47,5 @@ app.get('/home',(req,res)=>
     year:     new Date().getFullYear()
   })
 })
-app.listen(3000);
+app.listen(port);
 console.log('Severe start at port:3000');
