@@ -2,7 +2,7 @@ const express=require('express');
 const fs=require('fs');
 const hbs=require('hbs');
 var app=express();
-const port=Process.env.PORT || 3000;
+const port=process.env.PORT || 3000;
 hbs.registerPartials(__dirname+'/views/partials');//for partials
 app.use(express.static(__dirname+'/public'))//static file
 app.set('view engine','hbs');
