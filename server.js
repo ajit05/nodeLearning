@@ -16,11 +16,11 @@ app.use((req,res,next)=>
 });
 next();
 })
-app.use((req,res,next)=>
-{
-  res.render('maintenance.hbs');
-  //next();
-})
+// app.use((req,res,next)=>
+// {
+//   res.render('maintenance.hbs');
+//   //next();
+// })
 app.get('/',(req,res)=>
 {
   //res.send('<h1>hello Express</h1>');
