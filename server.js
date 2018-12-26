@@ -21,15 +21,14 @@ next();
 //   res.render('maintenance.hbs');
 //   //next();
 // })
-app.get('/',(req,res)=>
-{
-  //res.send('<h1>hello Express</h1>');
-  res.send({
-    "name": "Ajit Tripathy",
-    "location":"Mangalore Karnatak",
-    "isAvailable":"YES"
-  });
-});
+// app.get('/',(req,res)=>
+// {
+//   res.send({
+//     "name": "Ajit Tripathy",
+//     "location":"Mangalore Karnatak",
+//     "isAvailable":"YES"
+//   });
+// });
 app.get('/about',(req,res)=>
 {
   res.render('about.hbs',{
@@ -39,7 +38,7 @@ app.get('/about',(req,res)=>
   });
 });
 
-app.get('/home',(req,res)=>
+app.get('/',(req,res)=>
 {
   res.render('home.hbs',{
     pageTitle:'Home Page',
