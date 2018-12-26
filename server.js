@@ -32,7 +32,7 @@ next();
 app.get('/about',(req,res)=>
 {
   res.render('about.hbs',{
-    pageTitle:'About Page',
+    pageTitle:'About Ajit Tripathy',
     year:     new Date().getFullYear()
 
   });
@@ -42,7 +42,7 @@ app.get('/',(req,res)=>
 {
   res.render('home.hbs',{
     pageTitle:'Home Page',
-    message:'Welcome To Rehan World, have  greate fun',
+    message:'Welcome',
     year:     new Date().getFullYear()
   })
 })
