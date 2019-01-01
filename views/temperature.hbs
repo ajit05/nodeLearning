@@ -56,28 +56,24 @@ form.example::after {
 <br>
 <br>
 <br>
-
+{{#each value}}
+<li>{{this}}</li>
+{{/each}}
   <form class="example"  method="post" action='/fetchTemp' style="margin:auto;max-width:300px">
-    <input type="text" placeholder="Enter location" name="pincode" maxlength="100"minlength="3" required >
+    <input type="text" placeholder="Enter location" name="pincode" maxlength="100"minlength="4" required >
     <button type="submit", id="myBtn"><i class="fa fa-search"></i></button>
   </form>
   <br>
   <br>
   <div class="container">
   <div class="jumbotron">
-  <h3 style="color:black">  {{default}}</h3>
-     <br>
-      
-      <p style="color:green;font:10px"> Sky : {{summary}}</p>
-
-      <br>
-    <p style="color:green;font:10px">Actual Temperature : {{tempearture}} C </p>
+    {{tempearture}}
     <br>
-    <p style="color:green;font:10px">Apprent Temperature : {{apperentTemperture}}</p>
+    {{apperentTemperture}}
     <br>
-  <p style="color:green;font:10px">Humidity :  {{humidity}}</p>
-
-
+    {{humidity}}
+    <br>
+    {{icon}}
   </div>
 
 </div>
